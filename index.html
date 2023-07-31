@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+      <!-- Brand/logo -->
+      <a class="navbar-brand" href="#">
+        <img
+          src="images/weatherlogo.png"
+          alt="logo"
+          style="width: 40px"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        WeatherApp
+      </a>
+      <!-- Links -->
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav justify-content-end fw-bold">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--SerchBar Area-->
+    <form class="searchForm"  id="searchForm"  >
+      <div class="input-group mb-3 mt-5 form-outline w-75 mx-auto">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search the city"
+          id="searchInput"
+        />
+        <input class="btn btn-outline-secondary" type="submit" value="Search"/>
+      </div>
+    </form>
+
+    <!--firstContent-->
+    <div class="container mb-4 font fs-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row mt-3 justify-content-center pb-3">
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h1 id="cityName">Yangon</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center">Partly Cloudy</div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h3 id="date">Monday 10:00</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <img src="images/sunnybg.png" alt="Image" width="150px" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12 text-center temperature">
+                  <span id="temperature">31</span>°C 
+                  <br/>
+                  <div id="currentButton" >
+                 <input class="btn btn-success" type="submit" value="Current"  />
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center">Clear Sky</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card text-center">
+        <div class="card-header justify-content-center">
+          <h5 class="card-title font">5 Day Forecast</h5>
+        </div>
+        <div class="card-body">
+          <!-- First Row: Days -->
+          <div class="row justify-content-center font fs-6 pb-2">
+            <div class="col-md-2">Thurs</div>
+            <div class="col-md-2">Fri</div>
+            <div class="col-md-2">Sat</div>
+            <div class="col-md-2">Sun</div>
+            <div class="col-md-2">Mon</div>
+          </div>
+
+          <!-- Second Row: Images -->
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-2">
+              <img src="images/rainybg.png" alt="Image 1" width="100px" />
+            </div>
+            <div class="col-md-2">
+              <img src="images/cloudybg.png" alt="Image 2" width="100px" />
+            </div>
+            <div class="col-md-2">
+              <img src="images/sunnybg.png" alt="Image 3" width="100px" />
+            </div>
+            <div class="col-md-2">
+              <img src="images/rainybg.png" alt="Image 4" width="100px" />
+            </div>
+            <div class="col-md-2">
+              <img src="images/sunnybg.png" alt="Image 5" width="100px" />
+            </div>
+          </div>
+
+          <!-- Third Row: Temperature Degrees -->
+          <div class="row justify-content-center pb-3 pt-2">
+            <div class="col-md-2"><span class="fw-bold">27°</span>/29°</div>
+            <div class="col-md-2"><span class="fw-bold">25°</span>/29°</div>
+            <div class="col-md-2"><span class="fw-bold">30°</span>/32°</div>
+            <div class="col-md-2"><span class="fw-bold">25°</span>/32°</div>
+            <div class="col-md-2"><span class="fw-bold">31°</span>/32°</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
